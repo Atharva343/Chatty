@@ -23,6 +23,10 @@ app.use(
   })
 );
 
+app.get("/__test__", (req, res) => {
+  res.send("SERVER IS RUNNING");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
